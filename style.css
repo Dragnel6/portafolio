@@ -41,10 +41,10 @@ body{
     align-items: center;
     z-index: 100;
 }
-.logo{
-    font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight: 1.7rem;
+.logo img{
+    width: 70px; /* Ajusta el tamaño según tus necesidades */
+    height: auto; /* Para mantener la proporción de la imagen */
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
 }
 .menu a {
     font-size: 1.7rem;
