@@ -181,8 +181,10 @@ section{
     bottom: 4rem;
     width: 170px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
+
+
 .INICIO-SCI a{
     position: relative;
     display: inline-flex;
