@@ -29,6 +29,17 @@ body{
     color: var(--text-color);
 }
 
+body::-webkit-scrollbar{
+    width: 15px;
+}
+body::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 50px;
+}
+body::-webkit-scrollbar-thumb:hover{
+    background: var(--bg-color);
+    border: 1px solid var(--main-color);
+}
 .A01{
     position: fixed;
     top: 0;
@@ -348,4 +359,113 @@ h2#L{
 }
 .educacion-content .content h3 {
     font-size: 2rem;
+}
+
+/*SEsion de habilidades*/
+
+.skills{
+    background: var(--second-gb-color);
+}
+.skills .contenidoss{
+    display: flex;
+    overflow: auto;
+}
+.contenidoss::-webkit-scrollbar{
+    width: 15px;
+}
+.contenidoss::-webkit-scrollbar-thumb{
+    background: var(--bg-color);
+    border: 1px solid var(--main-color);
+    border-radius: 50px;
+}
+
+
+.skills .sesion-habilida{
+    flex: 1;
+    border: 1px solid transparent;
+    margin: 5px;
+    padding: 10px;
+    background: var(--bg-color);
+    border-radius: 10px;
+    animation: animateBg 10s linear infinite;
+}
+@keyframes animateBg {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.sesion-habilida img{
+    width: 400px;
+}
+/*Sesion de contacto/////////////////////////////*/
+
+.contactos{
+    min-height: auto;
+    padding-bottom: 7rem;
+}
+.contactos form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contactos form .input-caja {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contactos form .input-caja .field{
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+
+.contactos form .input-caja .field input,
+.contactos form .textarea-field textarea{
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+}
+.contactos form .input-caja .field input::placeholder,
+.contactos form .textarea-field textarea::placeholder{
+    color: var(--text-color);
+
+
+}
+.contactos form .focus{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-gb-color);
+    border-radius: .8rem 0 2.7rem;
+    z-index: -1;
+    transition: 0.5s;
+}
+.contactos form .input-caja .field input:focus~.focus,
+.contactos form .input-caja .field input:valid~.focus,
+.contactos form .textarea-field textarea:focus~.focus,
+.contactos form .textarea-field textarea:valid~.focus{
+    width: 100%;
+}
+.contactos form .field{
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+.contactos form .textarea-field textarea{
+    resize: none;
+}
+
+.contactos form .btn-caja .btn {
+    cursor: pointer;
+    margin-top: 10px;
 }
