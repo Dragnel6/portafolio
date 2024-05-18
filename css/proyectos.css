@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght300;400;500;600;700;800;900@&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Cinzel', serif;
+
+}
+
+:root{
+    --bg-color: #252850;
+    --second-gb-color:#112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+
+html{
+    font-size: 62.5%;
+    
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+body::-webkit-scrollbar{
+    width: 15px;
+}
+body::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 50px;
+}
+body::-webkit-scrollbar-thumb:hover{
+    background: var(--bg-color);
+    border: 1px solid var(--main-color);
+}
+section{
+    min-height: 100vh;
+    padding: 1rem 9% 2rem;
+
+}
+h2#L{
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+span {
+    color: var(--main-color);
+}
+.innovation{
+    
+ text-align: center;
+    
+}
+.innovation p{
+    font-size: 2rem;
+    margin: 2rem 0 4rem;
+   
+}
+.innovation h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: .7px var(--main-color);
+}
+.capturas{
+    display: flex;
+    overflow: auto;
+}
+.capturas::-webkit-scrollbar{
+    width: 15px;
+}
+.capturas::-webkit-scrollbar-thumb{
+    background: var(--bg-color);
+    border: 1px solid var(--main-color);
+    border-radius: 50px;
+}
+
+.capturas .sesion-habilida span{
+    font-size: 3.2rem;
+    font-weight: 700;
+    border-bottom: 1px solid var(--main-color);
+   
+}
+.capturas .sesion-habilida{
+    flex: 1;
+    border: 1px solid transparent;
+    margin: 5px;
+    padding: 10px;
+    background: var(--bg-color);
+    border-radius: 10px;
+    animation: animateBg 10s linear infinite;
+}
+
+.parraf p{
+    text-align: center;
+}
+.proyecto1 p{
+    font-size: 2rem;
+    margin: 2rem 0 4rem;
+}
+.proyecto2 {
+    background: var(--second-gb-color);
+}
+.proyecto2 p{
+    font-size: 2rem;
+    margin: 2rem 0 4rem;
+}

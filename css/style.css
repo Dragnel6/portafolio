@@ -46,16 +46,14 @@ body::-webkit-scrollbar-thumb:hover{
     left: 0;
     width: 100%;
     padding: 2rem 9%;
-    background: transparent;
+    background: var(--bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
     transition: .3s;
 }
-.header .sticky{
-    background: blue;
-}
+
 .logo img{
     width: 70px; /* Ajusta el tamaño según tus necesidades */
     height: auto; /* Para mantener la proporción de la imagen */
@@ -124,12 +122,12 @@ section{
 .content-inicio h1 span{
     color: var(--text-color);
 }
-.content-inicio .text-animado{
+.content-inicio .texts-animados{
     position: relative;
     width: 32.8rem;
 
 }
-.content-inicio .text-animado h3{
+.content-inicio .texts-animados h3{
     font-size: 3.2rem;
     font-weight: 700;
     color: transparent;
@@ -503,8 +501,6 @@ h2#L{
 }
 .pie-text p{
     font-size: 1.6rem;
-    
-
 }
 .pie-icons {
     margin-left: 40px;
