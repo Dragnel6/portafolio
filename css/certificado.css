@@ -25,6 +25,7 @@ html{
 body{
     background: var(--bg-color);
     color: var(--text-color);
+    
 }
 
 body::-webkit-scrollbar{
@@ -39,45 +40,43 @@ body::-webkit-scrollbar-thumb:hover{
     border: 1px solid var(--main-color);
 }
 
-
-
-.inicioo{
-    width: 100%;
-    
+.Resenas{
+    background: var(--bg-color);
+}
+.Resenas .contenidoss{
+    display: flex;
+    overflow: auto;
+}
+.contenidoss::-webkit-scrollbar{
+    width: 15px;
+}
+.contenidoss::-webkit-scrollbar-thumb{
+    background: var(--bg-color);
+    border: 1px solid var(--main-color);
+    border-radius: 50px;
 }
 
-
-
-
-.inicioo h1{
-    font-size: 5.6rem;
-    font-weight: 700;
-    line-height: 1.3;
-}
-.inicioo h1 span{
-    color: var(--main-color);
-}
-h1#L{
+h2#L{
     font-size: 5rem;
     margin-bottom: 3rem;
     text-align: center;
 }
 
-.container {
-    display: flex;
-}
-  
-.pdf-viewer {
-    width: 50%;
-    height: 90vh;
+.Resenas .sesion-resena{
+    flex: 1;
+    border: 1px solid transparent;
+    margin: 5px;
+    padding: 10px;
+    background: var(--bg-color);
+    border-radius: 10px;
+    
 }
 
-.pdf-viewer img{
-    margin: auto;
-    display: block;
-    width: 730px;
-    height: 90vh;
-    
+
+
+
+.Resenas h2 span{
+    color: var(--main-color);
 }
 
 .logo2 img{

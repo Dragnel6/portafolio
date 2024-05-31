@@ -72,7 +72,13 @@ span {
 .capturas{
     display: flex;
     overflow: auto;
-    box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+    box-shadow: 
+    #252850 0px 0px 0px 3px, 
+    #00abf0 0px 0px 0px 6px, 
+    #112e42 0px 0px 0px 9px, 
+    #00abf0 0px 0px 0px 12px, 
+    #252850 0px 0px 0px 15px;
+    border-radius: 5px;
 }
 .capturas::-webkit-scrollbar{
     width: 15px;
@@ -116,3 +122,67 @@ span {
     font-size: 2rem;
     margin: 2rem 0 4rem;
 }
+.proyecto3 p{
+    font-size: 2rem;
+    margin: 2rem 0 4rem;
+}
+.logo2 img{
+    width: 70px; /* Ajusta el tamaño según tus necesidades */
+    height: auto; /* Para mantener la proporción de la imagen */
+    margin-right: 40px;
+    border-radius: 20px;
+}
+
+.piee{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-gb-color);
+
+}
+.pie-text p{
+    font-size: 1.6rem;
+    
+
+}
+.pie-icons {
+    margin-left: 40px;
+}
+
+
+.pie-icons a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    z-index: 1;
+    overflow: hidden;
+}
+.pie-icons a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+.pie-icons a:hover::before{
+    width: 100%;
+
+}
+.pie-icons a  {
+    font-size: 2.4rem;
+    color: var(--bg-color);
+}
+.pie-icons a:hover{
+    color: var(--main-color);
+}
+  
