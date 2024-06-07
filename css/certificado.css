@@ -71,6 +71,15 @@ h2#L{
     border-radius: 10px;
     
 }
+.sesion-resena iframe {
+    box-shadow: 
+    #252850 0px 0px 0px 3px, 
+    #00abf0 0px 0px 0px 6px, 
+    #112e42 0px 0px 0px 9px, 
+    #00abf0 0px 0px 0px 12px, 
+    #252850 0px 0px 0px 15px;
+    border-radius: 5px;
+}
 
 
 

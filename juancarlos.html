@@ -77,7 +77,7 @@
                   <div class="tooltip">LinkedIn</div>
                 </li>
                 <li class="icon-content">
-                  <a href="https://github.com/Dragnel6?tab=repositories" aria-label="GitHub" data-social="github">
+                  <a href="https://github.com/Dragnel6" aria-label="GitHub" data-social="github">
                     <div class="filled"></div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -121,13 +121,13 @@
                <a href="#" class="btnmodal">Mi CV <i style="padding-left: 5px; padding-bottom: 5px;" class="fa-solid fa-download"></i></a>
             </div>
         </div>
-        <section class="modal">
-            <div class="modal-contenido">
-                <img src="/image/bostrap.png" alt="">
-                <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati, sunt.</h2>
-                <a href="#" class="cerrar-modal">Cerrar</a>
+       <!-- La ventana modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal-btn">&times;</span>
+                <iframe style="width: 730px; height: 600px; margin-top: -280px; margin-left: -250px;" src="/documentos/Curriculum Juan Carlos.pdf" frameborder="0"></iframe>
             </div>
-        </section>
+        </div>
     </section>
     <!--Sesion de educacion---------------------->
    <section class="sesion1" id="sesion">
@@ -245,8 +245,30 @@
         </div>
     </footer>
      
-  
+    <script>
+        // Obtener elementos del DOM
+        const modal = document.getElementById("myModal");
+        const openModalLink = document.querySelector(".btnmodal");
+        const closeModalBtn = document.querySelector(".close-modal-btn");
 
+        // Función para abrir la modal
+        openModalLink.onclick = function(event) {
+            event.preventDefault();
+            modal.style.display = "block";
+        }
+
+        // Función para cerrar la modal
+        closeModalBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Cerrar la modal si el usuario hace clic fuera de ella
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
     <script>
         function redireccionar() {
           var selectValue = document.getElementById("miSelect").value;
@@ -258,6 +280,6 @@
           }
         }
     </script>
-    <script src="/js/flotante.js"></script>
+    
 </body>
 </html>
