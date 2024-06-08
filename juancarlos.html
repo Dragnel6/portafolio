@@ -13,7 +13,6 @@
         <div class="logo">
             <img src="image/logo-2-Photoroom.jpg" alt="Logo personal">
         </div>
-        <span>jeancmt79@gmail.com</span>
         <div><i class="fa-solid fa-bars" id="icon"></i></div>
         <nav class="menu">
             <a class="active" href="#inicioo">Inicio</a>
@@ -47,9 +46,7 @@
                 <a href="/Certificados.html" class="btn">Mis certificados</a>
             </div>
         </div>
-        <div style=" text-align: right; margin-left: 70px; margin-top: 20px;" class="Perfil">
-            <img  src="image/foto2.jpg">
-        </div>
+        
         <div class="INICIO-SCI">
             <ul class="example-2">
                 <li class="icon-content">
@@ -244,6 +241,32 @@
             <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
         </div>
     </footer>
+
+    <script>
+        let sections = document.querySelectorAll('section');
+        let navLinks = document.querySelectorAll('header nav a');
+
+        window.onscroll = () => {
+            sections.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 100;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+
+                if(top >= offset && top < offset + height){
+                    //active navbar links
+                    navLinks.forEach(links => {
+                       links.classList.remove('active');
+                       document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+                    }); 
+                }
+            });
+            //HEADER
+            let header = document.querySelector('header');
+
+            header.classList.toggle('sticky', window.scrollY > 100);
+        }
+    </script>
      
     <script>
         // Obtener elementos del DOM
