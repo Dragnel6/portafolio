@@ -6,16 +6,16 @@
     <title>Home</title>
     <link rel="stylesheet" href="/css/style.css">
     <!--Iconos-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header class="header">
         <div class="logo">
             <img src="image/logo-2-Photoroom.jpg" alt="Logo personal">
         </div>
-        <div><i class="fa-solid fa-bars" id="icon"></i></div>
+        <div class="bx bx-menu" id="icon"></div>
         <nav class="menu">
-            <a class="active" href="#inicioo">Home</a>
+            <a href="#inicioo" class="active">Home</a>
             <a href="#sobreMI">about me</a>
             <a href="#sesion">education</a>
             <a href="#skills">skills</a>
@@ -26,6 +26,8 @@
                 <option value="ingles">English</option>
                 <option value="espanol">Spanish</option>
             </select>
+
+            <span class="active-nav"></span>
         </nav>
     </header>
    
@@ -235,11 +237,11 @@
             <p>Copyright & copy; 2024 by juan carlos | All Right Reserved.</p>
         </div>
         <div class="pie-icons">
-            <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
      
-    <script src="js/script.js"></script>
+    <script src="js/flotante.js"></script>
     <script>
         // Obtener elementos del DOM
         const modal = document.getElementById("myModal");
