@@ -185,4 +185,41 @@ span {
 .pie-icons a:hover{
     color: var(--main-color);
 }
-  
+ 
+@media (max-width: 1240px){
+    .capturas .sesion-habilida{
+        width: 800px;
+    }
+    .capturas .sesion-habilida img{
+        max-width: 800px;
+    }
+}
+ 
+@media (max-width: 990px){
+    .capturas .sesion-habilida{
+        width: 700px;
+    }
+    .capturas .sesion-habilida img{
+        max-width: 700px;
+    }
+}
+@media (max-width: 865px){
+    .capturas .sesion-habilida{
+        width: 500px;
+    }
+    .capturas .sesion-habilida img{
+        max-width: 500px;
+    }
+}
+@media (max-width: 610px){
+    .piee {
+        flex-direction: column-reverse;
+    }
+    .piee p {
+        margin-top: 2rem;
+    }
+    .piee .logo2 {
+        margin-top: 2rem;
+        margin-left: 66px;
+    }
+}

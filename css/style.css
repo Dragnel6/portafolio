@@ -739,6 +739,19 @@ h2#L{
     }
 }
 @media (max-width: 850px) {
+    .inicio::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Ajusta el valor de opacidad según sea necesario */
+    }
+      
+    .inicio .content-inicio{
+        z-index: 1;
+    }
     .header {
         background: var(--bg-color);
 
@@ -805,6 +818,96 @@ h2#L{
         transform: translateX(0);
         transition-delay: .25s;
     }
+    .Resenas .sesion-resena{
+        width: 700px;
+       
+    }
+    .Resenas iframe {
+        width: 550px;
+    }
 
 }
+
+@media (max-width: 572px) {
+ html {
+     font-size: 50%;
+  }
+  .inicio::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta el valor de opacidad según sea necesario */
+  }
   
+  .inicio .content-inicio{
+    z-index: 1;
+  }
+  .inicio h1{
+     display: flex;
+     flex-direction: column;
+  }
+  .Resenas .sesion-resena{
+     width: 500px;
+    
+    }
+    .Resenas iframe {
+        width: 400px;
+    }
+
+}
+@media (max-width: 500px){
+    .INICIO-SCI {
+        width: 160px;
+    }
+    .INICIO-SCI a{
+        width: 38px;
+        height: 38px;
+    }
+
+}
+@media (max-width: 420px){
+    .inicio h1 {
+        font-size: 5.2rem;
+    }
+    .sesion1{
+        padding: 10rem 4% 5rem 5%;
+    }
+    .sesion-habilida img{
+        width: 300px;
+    }
+    .Resenas .sesion-resena{
+        width: 400px;
+       
+    }
+    .Resenas iframe {
+        width: 300px;
+    }
+    .contactos form .input-caja .field {
+        width: 100%;
+    }
+    .piee {
+        flex-direction: column-reverse;
+    }
+    .piee p {
+        margin-top: 2rem;
+    }
+    .piee .logo2 {
+        margin-top: 2rem;
+        margin-left: 66px;
+    }
+}
+@media (max-width: 360px){
+    .inicio {
+        justify-content: center;
+
+    }
+    .content-inicio {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+}

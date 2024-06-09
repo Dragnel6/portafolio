@@ -25,7 +25,6 @@ html{
 body{
     background: var(--bg-color);
     color: var(--text-color);
-    
 }
 
 body::-webkit-scrollbar{
@@ -80,9 +79,6 @@ h2#L{
     #252850 0px 0px 0px 15px;
     border-radius: 5px;
 }
-
-
-
 
 .Resenas h2 span{
     color: var(--main-color);
@@ -147,4 +143,72 @@ h2#L{
 .pie-icons a:hover{
     color: var(--main-color);
 }
-  
+@media (max-width: 1338px){
+    .Resenas .sesion-resena{
+       width: 700px;
+        
+    }
+    .sesion-resena iframe {
+      width: 600px;
+    }
+}  
+@media (max-width: 1270px){
+    .Resenas .sesion-resena{
+        width: 600px;
+         
+    }
+    .sesion-resena iframe {
+      width: 500px;
+    }
+
+}
+@media (max-width: 1070px){
+    .contenidoss{
+        flex-direction: column;
+        align-items: center;
+    }
+    .Resenas iframe {
+        width: 100%; /* Asegura que los divs ocupen todo el ancho del contenedor */
+        margin: 10px 0; /* Espaciado entre divs en vertical */
+    }
+}
+@media (max-width: 610px){
+    .Resenas .sesion-resena{
+        width: 500px;
+         
+    }
+    .sesion-resena iframe {
+      width: 500px;
+      height: 500px;
+    }
+    .piee {
+        flex-direction: column-reverse;
+    }
+    .piee p {
+        margin-top: 2rem;
+    }
+    .piee .logo2 {
+        margin-top: 2rem;
+        margin-left: 66px;
+    }
+}
+@media (max-width: 550px){
+    .Resenas .sesion-resena{
+        width: 400px;
+         
+    }
+    .sesion-resena iframe {
+      width: 400px;
+      height: 400px;
+    }
+}
+@media (max-width: 445px){
+    .Resenas .sesion-resena{
+        width: 300px;
+         
+    }
+    .sesion-resena iframe {
+      width: 300px;
+      height: 300px;
+    }
+}
