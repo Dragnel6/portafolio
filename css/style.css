@@ -428,22 +428,33 @@ h2#L{
 }
 
 .modal-content {
+    position: relative;
     background-color: white;
     margin: 7% auto;
     padding: 290px;
     border: 1px solid #888;
     width: 100%;
     max-width: 800px;
+    margin-top: 100px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.modal-content iframe {
+    width: 710px; 
+    height: 600px; 
+    margin-top: -280px; 
+    margin-left: -250px;
 }
 
 /* Botón para cerrar la modal */
 .close-modal-btn {
     color: var(--main-color);
-    position: absolute;
-    top: 110px;
-    right: 345px;
+    position: absolute; /* Posicionamiento absoluto dentro del div principal */
+    top: 10px; /* Distancia desde la parte superior */
+    right: 10px; /* Distancia desde la parte derecha */
+    padding: 5px 10px; /* Espaciado interno del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el span */
+    text-align: center;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
@@ -734,6 +745,17 @@ h2#L{
     .inicio {
         padding: 0 4%;
     }
+    .modal-content {
+        max-width: 500px;
+        
+    }
+    .close-modal-btn {
+        margin-right: -10px;
+        
+    }
+    .modal-content iframe {
+        width: 500px;
+    }
     .piee {
         padding: 2rem 4%;
     }
@@ -826,6 +848,38 @@ h2#L{
         width: 550px;
     }
 
+}
+@media (max-width: 615px){
+    .modal{
+        width: 300px;
+    }
+    .modal-content {
+        width: 300px;
+        
+    }
+    .close-modal-btn {
+     margin-right: 90px;
+        
+    }
+    
+    .modal-content iframe {
+        align-items: center;
+        width: 400px;
+    }
+}
+@media (max-width: 485px){
+    .close-modal-btn {
+        margin-right: 92%;
+           
+    }
+
+}
+@media (max-width: 445px){
+    .modal-content iframe {
+        align-items: center;
+        width: 290px;
+        height: 450px;
+    }
 }
 
 @media (max-width: 572px) {
