@@ -556,8 +556,8 @@ h2#L{
 }
 
 
-.sesion-resena img{
-    width: 600px;
+.sesion-resena iframe{
+    width: 400px;
 }
 /*Sesion de reseñas ///////////////////////////////*/
 .skills{
@@ -728,6 +728,9 @@ h2#L{
     color: var(--main-color);
 }
 
+#trucazo{
+    opacity: 0;
+}
 /*Estilo responsive*/
 @media (max-width: 115px){
     html {

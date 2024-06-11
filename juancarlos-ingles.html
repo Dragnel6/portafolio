@@ -16,13 +16,13 @@
         <div class="bx bx-menu" id="icon"></div>
         <nav class="menu">
             <a href="#inicioo" class="active">Home</a>
-            <a href="#sobreMI">about me</a>
-            <a href="#sesion">education</a>
-            <a href="#skills">skills</a>
+            <a href="#sobreMI">About me</a>
+            <a href="#sesion">Education</a>
+            <a href="#skills">Skills</a>
             <a href="#resenas">Testimonials</a>
-            <a href="#contacto">contact</a>
+            <a href="#contacto">Contact</a>
             <select id="miSelect" onchange="redireccionar()" class="rectangle-3">
-                <option value="all">translate</option>
+                <option value="all">Translate</option>
                 <option value="ingles">English</option>
                 <option value="espanol">Spanish</option>
             </select>
@@ -35,7 +35,7 @@
     <section class="inicio" id="inicioo">
         
         <div class="content-inicio">
-            <h1>Hello, I'm<span>Juan Carlos</span></h1>
+            <h1>Hello, I'm <span>Juan Carlos</span></h1>
             <div class="texts-animados">
                 <h3>Frontend Developer</h3>
             </div>
@@ -102,7 +102,7 @@
 
     <!--Sesion de sobre mi---------------------->
     <section class="sobremi" id="sobreMI">
-        <h2 class="letra" id="L">about <span>me</span></h2>
+        <h2 class="letra" id="L">About <span>me</span></h2>
         <div class="Sobre-img">
             <img src="image/foto2.jpg" alt="">
             <span id="spiner"class="circulo"></span>
@@ -122,7 +122,7 @@
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close-modal-btn">&times;</span>
-                <iframe src="/documentos/Curriculum Juan Carlos.pdf" frameborder="0"></iframe>
+                <iframe src="/documentos/Curriculum Juan Carlos-ingles.pdf" frameborder="0"></iframe>
             </div>
         </div>
     
@@ -190,7 +190,12 @@
             <div class="sesion-resena">
                 <iframe src="https://drive.google.com/file/d/1bOD6ab28Ibe0PJ6k-9JyJ8DKICZ4ujaW/preview" width="640" height="480" allow="autoplay"></iframe>
             </div>
-        
+            <div class="sesion-resena">
+                <iframe src="https://drive.google.com/file/d/11aLjLZr8wafF3ExLEC8BfGciV1Z3LiF8/preview" width="640" height="480" allow="autoplay"></iframe>
+            </div>
+            <div class="sesion-resena">
+                <iframe src="https://drive.google.com/file/d/1Ksdkqt0zHAlz5O7iIK7KwN7xvN-EuidX/preview" width="640" height="480" allow="autoplay"></iframe>
+            </div>
         
         </div>
    </section>
@@ -198,30 +203,30 @@
    <!--Sesion de contacto---------------------->
    <section class="contactos" id="contacto">
      <h2 class="letra" id="L">Contact <span>me</span></h2>
-      <form action="#">
+      <form action="https://formspree.io/f/xnqeejra" method="POST">
          <div class="input-caja">
             <div class="field">
-                <input type="text" placeholder="full name" required>
+                <input name="name" type="text" placeholder="full name" required>
                 <span class="focus"></span>
             </div>
             <div class="field">
-                <input type="text" placeholder="Email" required>
+                <input name="email" type="text" placeholder="Email" required>
                 <span class="focus"></span>
             </div>
          </div>
          <div class="input-caja">
             <div class="field">
-                <input type="number" placeholder="Phone number" required>
+                <input name="name" type="number" placeholder="Phone number" required>
                 <span class="focus"></span>
             </div>
             <div class="field">
-                <input type="text" placeholder="Mail subject" required>
+                <input type="name" placeholder="Mail subject" required>
                 <span class="focus"></span>
             </div>
          </div>
          
           <div class="textarea-field">
-             <textarea name="" id="" cols="30" rows="10" placeholder="Write a message" required></textarea>
+             <textarea name="message" id="mensaje" cols="30" rows="10" placeholder="Write a message" required></textarea>
              <span class="focus"></span>
           </div>
 

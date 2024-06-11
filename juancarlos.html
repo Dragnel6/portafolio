@@ -191,6 +191,12 @@
             <div class="sesion-resena">
                 <iframe src="https://drive.google.com/file/d/1UxON8EW02NX5kUxLf-lfFeh54BQZGxyw/preview" width="640" height="480" allow="autoplay"></iframe>
             </div>
+            <div class="sesion-resena">
+                <iframe src="https://drive.google.com/file/d/11aLjLZr8wafF3ExLEC8BfGciV1Z3LiF8/preview" width="640" height="480" allow="autoplay"></iframe>
+            </div>
+            <div class="sesion-resena">
+                <iframe src="https://drive.google.com/file/d/1Ksdkqt0zHAlz5O7iIK7KwN7xvN-EuidX/preview" width="640" height="480" allow="autoplay"></iframe>
+            </div>
           
         </div>
     </section>
@@ -198,30 +204,30 @@
    <!--Sesion de contacto---------------------->
    <section class="contactos" id="contacto">
      <h2 class="letra" id="L">Contacta<span>me</span></h2>
-      <form action="#">
+      <form id="form"  action="https://formspree.io/f/xnqeejra" method="POST">
          <div class="input-caja">
             <div class="field">
-                <input type="text" placeholder="Nombre completo" required>
+                <input name="name" type="text" placeholder="Nombre completo" required>
                 <span class="focus"></span>
             </div>
             <div class="field">
-                <input type="text" placeholder="Correo electronico" required>
+                <input name="email" type="text" placeholder="Correo electronico" required>
                 <span class="focus"></span>
             </div>
          </div>
          <div class="input-caja">
             <div class="field">
-                <input type="number" placeholder="Numero telefonico" required>
+                <input name="name" type="number" placeholder="Numero telefonico" required>
                 <span class="focus"></span>
             </div>
             <div class="field">
-                <input type="text" placeholder="Asunto del correo" required>
+                <input name="name" type="text" placeholder="Asunto del correo" required>
                 <span class="focus"></span>
             </div>
          </div>
          
           <div class="textarea-field">
-             <textarea name="" id="" cols="30" rows="10" placeholder="Escribe un mensaje" required></textarea>
+             <textarea name="message" id="mensajee" cols="30" rows="10" placeholder="Escribe un mensaje" required></textarea>
              <span class="focus"></span>
           </div>
 
@@ -229,6 +235,7 @@
              <button type="submit" class="btn">Enviar</button>
           </div>
       </form>
+
 
     </section>
     <!--sesion de pie de pagina---------------------->
@@ -243,6 +250,7 @@
             <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
+    
     <script src="/js/flotante.js"></script>
     <script>
         // Obtener elementos del DOM
