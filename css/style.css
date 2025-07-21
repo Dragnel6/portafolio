@@ -338,7 +338,7 @@ span#spiner{
 }
 
 .Sobre-img img{
-    width: 200px; 
+    width: 13vw; 
     border-radius: 100px; 
     border: .2rem solid var(--main-color);
 }
@@ -526,7 +526,7 @@ h2#L{
     font-size: 2rem;
 }
 
-/*SEsion de habilidades*/
+/*SEsion de Reseñas*/
 
 .Resenas{
     background: var(--bg-color);
@@ -559,26 +559,43 @@ h2#L{
 .sesion-resena iframe{
     width: 400px;
 }
-/*Sesion de reseñas ///////////////////////////////*/
+/*Sesion de skills ///////////////////////////////*/
 .skills{
     background: var(--second-gb-color);
 }
 .skills .contenidoss{
     display: flex;
-    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 7px;
 }
-.contenidoss::-webkit-scrollbar{
-    width: 15px;
-}
-.contenidoss::-webkit-scrollbar-thumb{
-    background: var(--bg-color);
-    border: 1px solid var(--main-color);
-    border-radius: 50px;
+.skills .div8 {
+    grid-column: span 2 / span 2;
 }
 
+.skills .div9 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+}
 
+.skills .div10 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 5;
+}
+
+.skills .div11 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.skills .div12 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
 .skills .sesion-habilida{
-    flex: 1;
     border: 1px solid transparent;
     margin: 5px;
     padding: 10px;
@@ -593,7 +610,7 @@ h2#L{
 }
 
 .sesion-habilida img{
-    width: 400px;
+    width: 23vw;
 }
 /*Sesion de contacto/////////////////////////////*/
 
@@ -857,6 +874,41 @@ h2#L{
     .Resenas iframe {
         width: 550px;
     }
+    .skills .contenidoss{
+        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 7px;
+    }
+    .skills .div8 {
+        grid-column: span 2 / span 2;
+    }
+
+    .skills .div9 {
+        grid-column: span 2 / span 2;
+        grid-column-start: 3;
+    }
+
+    .skills .div10 {
+        grid-column: span 2 / span 2;
+        grid-row-start: 2;
+    }
+
+    .skills .div11 {
+        grid-column: span 2 / span 2;
+        grid-column-start: 3;
+        grid-row-start: 2;
+    }
+
+    .skills .div12 {
+       grid-column: span 2 / span 2;
+        grid-column-start: 2;
+        grid-row-start: 3;
+    }
+    .skills .sesion-habilida{
+        text-align: center;
+    }
 
 }
 @media (max-width: 615px){
@@ -920,6 +972,39 @@ h2#L{
     .Resenas iframe {
         width: 400px;
     }
+    .skills .contenidoss{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 7px;
+    }
+    .skills .div8 {
+        grid-column: span 2 / span 2;
+    }
+
+    .skills .div9 {
+        grid-column: span 2 / span 2;
+        grid-row-start: 2;
+    }
+
+    .skills .div10 {
+        grid-column: span 2 / span 2;
+        grid-row-start: 3;
+    }
+
+    .skills .div11 {
+        grid-column: span 2 / span 2;
+        grid-row-start: 4;
+    
+    }
+
+    .skills .div12 {
+        grid-column: span 2 / span 2;
+        grid-row-start: 5;
+    }
+    .skills .sesion-habilida{
+        text-align: center;
+    }
 
 }
 @media (max-width: 500px){
@@ -962,6 +1047,7 @@ h2#L{
         margin-top: 2rem;
         margin-left: 66px;
     }
+    
 }
 @media (max-width: 360px){
     .inicio {
