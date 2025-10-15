@@ -1,0 +1,153 @@
+/*SEsion de Reseñas ahora mis proyectos///////////////////////////////////////////////*/
+.Resenas {
+    background: var(--bg-color);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Patrón de puntos para reseñas */
+.Resenas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    background-image: radial-gradient(circle, rgba(0, 171, 240, 0.15) 1.5px, transparent 1.5px);
+    background-size: 28px 28px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.Resenas>* {
+    position: relative;
+    z-index: 2;
+}
+
+.Resenas .project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    width: 100%;
+    z-index: 2;
+}
+
+.Resenas .project-container .project-card {
+    width: 100%;
+    height: auto;
+    background-color: var(--second-gb-color);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Resenas .project-container .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: rgba(0, 171, 240, 0.3) 0px 5px 15px, rgba(0, 0, 0, 0.4) 0px 8px 20px -5px;
+}
+
+.Resenas .project-container .project-card .project-info {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.Resenas .project-container .project-card .project-info figure {
+    margin: 0;
+    padding: 0;
+}
+
+.Resenas .project-container .project-card .project-info figure img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.Resenas .project-container .project-card:hover .project-info figure img {
+    transform: scale(1.05);
+}
+
+.Resenas .project-container .project-card .project-info figure h3 {
+    font-size: 2.4rem;
+    color: var(--main-color);
+    margin: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.Resenas .project-container .project-card .project-info p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    opacity: 0.9;
+    margin: 0;
+    text-align: justify;
+}
+
+.Resenas .project-container .project-card .project-info button {
+    background: linear-gradient(45deg, var(--main-color), #0056b3);
+    color: white;
+    border: none;
+    padding: 1.2rem 2.4rem;
+    border-radius: 25px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: auto;
+}
+
+.Resenas .project-container .project-card .project-info button:hover {
+    background: linear-gradient(45deg, #0056b3, var(--main-color));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(0, 171, 240, 0.3);
+}
+/* Responsive para proyectos */
+@media (max-width: 768px) {
+    .Resenas .project-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .Resenas .project-container .project-card .project-info {
+        padding: 1.5rem;
+    }
+
+    .Resenas .project-container .project-card .project-info figure h3 {
+        font-size: 2rem;
+    }
+
+    .Resenas .project-container .project-card .project-info p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 485px) {
+    .Resenas .project-container .project-card .project-info {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .Resenas .project-container .project-card .project-info figure img {
+        height: 150px;
+    }
+
+    .Resenas .project-container .project-card .project-info figure h3 {
+        font-size: 1.8rem;
+    }
+
+    .Resenas .project-container .project-card .project-info button {
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+    }
+}
