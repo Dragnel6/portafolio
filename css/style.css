@@ -191,22 +191,23 @@ section{
 .inicio-img img{
     width: 45rem;
     height: 45rem;
-    border-radius: 40%;
-    border: .3rem solid var(--main-color);
+    border-radius: 20%;
+   
     object-fit: cover;
-    box-shadow: 0 0 25px rgba(0, 171, 240, 0.5);
+   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     animation: float 3s ease-in-out infinite;
 }
 
 /* Animación flotante para la imagen */
-@keyframes float {
+
+/* @keyframes float {
     0%, 100% {
         transform: translateY(0);
     }
     50% {
         transform: translateY(-10px);
     }
-}
+} */
 
 /*//////////////////////////ESTILO DE LOS BOTONES///////////////////////*/
 .btn-caja{
@@ -845,7 +846,8 @@ ul {
 .educacion-content .content {
  position: relative;
  padding: 1.5rem;
- border: .2rem solid var(--main-color);
+ border: .2rem solid var(--second-gb-color);
+ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
  border-radius: .6rem;
  margin-bottom: 2rem;
 }
