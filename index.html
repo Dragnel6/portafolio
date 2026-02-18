@@ -227,41 +227,60 @@
    <!--Sesion de habilidades---------------------->
    <section class="skills" id="skills">
      <h2 class="letra" id="L">Mis <span>Certificados</span></h2>
-       <div class="certify-container">
-          <div class="flex-certify">
-              <div class="certify-container">
-                    <img src="/certificados/TALLER DE DISEÑO UX UI_page-0001.jpg" alt="">
-                </div>
+     <div class="certify-accordion">
+        <div class="certify-item">
+            <button type="button" class="certify-toggle" data-accordion="cert-programacion">Desarrollo</button>
+            <div id="cert-programacion" class="certify-panel">
                 <div class="certify-container">
-                    <img src="/certificados/diploma-frontend-developer_page-0001.jpg" alt="">
+                    <div class="flex-certify">
+                        <div class="certify-container">
+                            <img src="/certificados/TALLER DE DISEÑO UX UI_page-0001.jpg" alt="Certificado de diseno UX UI">
+                        </div>
+                        <div class="certify-container">
+                            <img src="/certificados/diploma-frontend-developer_page-0001.jpg" alt="Certificado de frontend developer">
+                        </div>
+                        <div class="certify-container">
+                            <img src="/certificados/Desarrollo dr sofware phyton_page-0001.jpg" alt="Certificado de desarrollo de software Python">
+                        </div>
+                    </div>
+                    <div class="flex-certify">
+                        <div class="certify-container">
+                            <img src="/certificados/CertificadoUDEMY_page-0001.jpg" alt="Certificado Udemy">
+                        </div>
+                        <div class="certify-container">
+                            <img src="/certificados/certificate-mimo-HTML_page-0001.jpg" alt="Certificado Mimo HTML">
+                        </div>
+                        <div class="certify-container">
+                            <img src="/certificados/certificate-mimo-css_page-0001.jpg" alt="Certificado Mimo CSS">
+                        </div>
+                    </div>
+                    <div class="flex-certify">
+                        <div class="certify-container">
+                            <img src="/certificados/Juan Carlos Martinez Torres_page-0001.jpg" alt="Certificado Juan Carlos Martinez Torres">
+                        </div>
+                        <div class="certify-container">
+                            <img src="/certificados/WDA.jpg" alt="Certificado WDA">
+                        </div>
+                        <div class="certify-container">
+                            <img src="/certificados/WDA.jpg" alt="Certificado WDA">
+                        </div>
+                    </div>
                 </div>
-                <div class="certify-container">
-                    <img src="/certificados/Desarrollo dr sofware phyton_page-0001.jpg" alt="">
-                </div>
-          </div>
-          <div class="flex-certify">
-              <div class="certify-container">
-                    <img src="/certificados/CertificadoUDEMY_page-0001.jpg" alt="">
-                </div>
-                <div class="certify-container">
-                    <img src="/certificados/certificate-mimo-HTML_page-0001.jpg" alt="">
-                </div>
-                <div class="certify-container">
-                    <img src="/certificados/certificate-mimo-css_page-0001.jpg" alt="">
-                </div>
-          </div>
-           <div class="flex-certify">
-              <div class="certify-container">
-                  <img src="/certificados/Juan Carlos Martinez Torres_page-0001.jpg" alt="">
-              </div>
-              <div class="certify-container">
-                  <img src="/certificados/WDA.jpg" alt="">
-              </div>
-              <div class="certify-container">
-                  <img src="/certificados/WDA.jpg" alt="">
-              </div>
-           </div>
+            </div>
         </div>
+        <div class="certify-item">
+            <button type="button" class="certify-toggle" data-accordion="cert-ingles">Ingles</button>
+            <div id="cert-ingles" class="certify-panel">
+                <p class="accordion-empty">Aun no hay certificados en esta seccion.</p>
+            </div>
+        </div>
+        <div class="certify-item">
+            <button type="button" class="certify-toggle" data-accordion="cert-data">Ciencia de datos</button>
+            <div id="cert-data" class="certify-panel">
+                <p class="accordion-empty">Aun no hay certificados en esta seccion.</p>
+            </div>
+        </div>
+     </div>
    </section>
    <section class="Resenas" id="resenas">
         <h2 class="letra" id="L">Mis <span>Proyectos</span></h2>
@@ -466,28 +485,42 @@
         }
     </script>
     <script>
-        // Obtener elementos del DOM
+        // Modal del CV
         const modal = document.getElementById("myModal");
         const openModalLink = document.querySelector(".btnmodal");
         const closeModalBtn = document.querySelector(".close-modal-btn");
 
-        // Función para abrir la modal
         openModalLink.onclick = function(event) {
             event.preventDefault();
             modal.style.display = "block";
         }
 
-        // Función para cerrar la modal
         closeModalBtn.onclick = function() {
             modal.style.display = "none";
         }
 
-        // Cerrar la modal si el usuario hace clic fuera de ella
         window.onclick = function(event) {
             if (event.target == modal) {
                 modal.style.display = "none";
             }
         }
+    </script>
+    <script>
+        const accordionToggles = document.querySelectorAll('[data-accordion]');
+
+        accordionToggles.forEach((toggle) => {
+            toggle.addEventListener('click', () => {
+                const panelId = toggle.getAttribute('data-accordion');
+                const panel = document.getElementById(panelId);
+                const item = toggle.closest('.certify-item');
+
+                if (!panel || !item) {
+                    return;
+                }
+
+                item.classList.toggle('is-open');
+            });
+        });
     </script>
     <script>
         function redireccionar() {

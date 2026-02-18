@@ -648,6 +648,112 @@ ul {
     transform: scale(1.05);
 }
 
+.skills .certify-accordion {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    flex-direction: column;
+    gap: 2.9rem;
+    margin-top: 2rem;
+}
+
+.skills .certify-item {
+    --tab-color: var(--main-color);
+    position: relative;
+    border: none;
+    border-radius: 1.2rem;
+    overflow: visible;
+    background: var(--second-gb-color);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 6px;
+    padding-top: 2.7rem;
+}
+
+.skills .certify-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 2.7rem;
+    height: .2rem;
+    background: var(--tab-color);
+    z-index: 1;
+}
+
+.skills .certify-toggle {
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    transform: translateY(-22%);
+    background: var(--tab-color);
+    color: var(--text-color);
+    padding: 0.8rem 2.3rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .05rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 6px;
+    z-index: 2;
+}
+
+.skills .certify-toggle::after {
+    content: '';
+}
+
+.skills .certify-item.is-open .certify-toggle::after {
+    content: '';
+}
+
+.skills .certify-panel {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 2rem;
+    background: var(--second-gb-color);
+    transition: max-height 0.55s ease-in-out, padding 0.55s ease-in-out;
+    will-change: max-height, padding;
+}
+
+.skills .certify-item.is-open .certify-panel {
+    max-height: 3000px;
+    padding: 2rem;
+}
+
+.skills .certify-item:nth-child(1) {
+    --tab-color: #2f74b5;
+}
+
+.skills .certify-item:nth-child(1) .certify-toggle {
+    background: var(--tab-color);
+}
+
+.skills .certify-item:nth-child(2) {
+    --tab-color: #7a7a9f;
+}
+
+.skills .certify-item:nth-child(2) .certify-toggle {
+    background: var(--tab-color);
+    left: 28%;
+}
+
+.skills .certify-item:nth-child(3) {
+    --tab-color: #b07cc5;
+}
+
+.skills .certify-item:nth-child(3) .certify-toggle {
+    background: var(--tab-color);
+    left: 55%;
+}
+
+.skills .accordion-empty {
+    font-size: 1.8rem;
+    text-align: center;
+    opacity: 0.9;
+    padding: 1rem 0;
+}
+
 /*SEsion de Proyectos*/
 .Resenas{
     background: var(--bg-color);
@@ -1551,6 +1657,18 @@ span#spiner{
     
     .piee {
         padding: 2rem 4%;
+    }
+
+    .skills .certify-toggle {
+        font-size: 1.8rem;
+    }
+
+    .skills .certify-panel {
+        padding: 0 1.6rem;
+    }
+
+    .skills .certify-item.is-open .certify-panel {
+        padding: 1.6rem;
     }
 }
 
