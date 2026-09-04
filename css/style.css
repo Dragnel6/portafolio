@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght300;400;500;600;700;800;900@&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 *{
     margin: 0;
@@ -16,6 +17,16 @@
     --second-gb-color:#112e42;
     --text-color: #ededed;
     --main-color: #00abf0;
+
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --primary: #2563eb;
+  --primary-dark: #1e4fd8;
+  --muted: #6b7280;
+  --text: #0f1724;
+  --radius: 10px;
+  --shadow: 0 6px 18px rgba(15,23,36,0.06);
+  --shadow-hover: 0 12px 30px rgba(15,23,36,0.10);
 }
 
 html{
@@ -23,9 +34,12 @@ html{
 }
 
 body{
-    background: var(--bg-color);
-    color: var(--text-color);
     position: relative;
+    font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: var(--text);          /* color por defecto en fondos claros */
+    background: var(--bg);       /* fondo por defecto (claro) */
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
 }
 
 /* Patrón de puntos de fondo general mejorado */
@@ -157,6 +171,7 @@ section{
     font-size: 5.6rem;
     font-weight: 700;
     line-height: 1.3;
+    color: var(--main-color);
 }
 
 .content-inicio h1 span{
@@ -178,6 +193,7 @@ section{
 .content-inicio p{
     font-size: 2rem;
     margin: 2rem 0 4rem;
+    color: white;
 }
 
 /* Contenedor para la imagen del usuario en inicio */
@@ -522,14 +538,16 @@ ul {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    height: 700px;
+    grid-template-rows: auto auto;
+    height: auto;
+    min-height: 700px;
     gap: 20px;
 }
 
 .sobremi .skills-container .skills-grid:nth-child(3) {
     grid-column: 1 / span 2;
-    height: 30vh;
+    height: auto;
+    min-height: 30vh;
 }
 
 .sobremi .skills-container .skills-grid {
@@ -544,7 +562,7 @@ ul {
 }
 
 .sobremi .skills-container .skills-grid h1 {
-    font-size: 3.4rem;
+    font-size: clamp(2.2rem, 3vw, 3.4rem);
     text-align: center;
     font-family: 'Cinzel', serif;
     font-weight: 700;
@@ -558,21 +576,49 @@ ul {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    gap: 8px;
+    align-items: flex-start;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
-.sobremi .skills-container .skills-grid .skills-flex .skilss-img img {
-    width: 120px;
-    height: 120px;
+.sobremi .skills-container .skills-grid .skills-flex .skilss-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 100px;
+}
+
+.sobremi .skills-container .skills-grid .skills-flex .skilss-img img,
+.sobremi .skills-container .skills-grid .skills-flex .skilss-img .skill-icon {
+    width: 100px;
+    height: 100px;
     border-radius: 15px;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
 
-.sobremi .skills-container .skills-grid .skills-flex .skilss-img img:hover {
+.sobremi .skills-container .skills-grid .skills-flex .skilss-img .skill-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #f4f8ff 0%, #e8f1ff 100%);
+    color: #4B8EF3;
+    font-size: 3.2rem;
+    box-shadow: inset 0 0 0 1px rgba(75, 142, 243, 0.15);
+}
+
+.sobremi .skills-container .skills-grid .skills-flex .skilss-img img:hover,
+.sobremi .skills-container .skills-grid .skills-flex .skilss-img .skill-icon:hover {
     transform: scale(1.1);
+}
+
+.sobremi .skills-container .skills-grid .skills-flex .skilss-img .skill-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color, #1f2937);
+    text-align: center;
+    line-height: 1.2;
 }
 
 /*Sesion de certificados ///////////////////////////////*/
@@ -938,6 +984,7 @@ ul {
 .titulo {
  font-size: 2.5rem;
  margin: 0 0 1.5rem 2rem;
+ color: white;
 }
 
 .educacion-column .educacion-box {
@@ -970,6 +1017,14 @@ ul {
 
 .educacion-content .content h3 {
     font-size: 2rem;
+    color: white;
+}
+
+.educacion-content .content p {
+    margin-top: 0.8rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 /*Sesion de contacto/////////////////////////////*/
@@ -1170,6 +1225,7 @@ h2#L {
     text-align: center;
     position: relative;
     z-index: 3;
+    color: var(--text-color);
 }
 
 span {
@@ -1219,11 +1275,152 @@ span#spiner{
     margin: 2rem 0 3rem;
 }
 
-/*Estilo responsive*/
-@media (max-width: 115px){
-    html {
-        font-size: 55%;
-    }
+/* Estilos generales (añade o combina con tus estilos existentes) */
+.insignias{
+  padding: 56px 20px;
+  background: var(--second-gb-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.insignias::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--second-gb-color);
+    background-image: radial-gradient(circle, rgba(0, 171, 240, 0.18) 1.5px, transparent 1.5px);
+    background-size: 22px 22px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.insignias > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Grid de tarjetas (ligero ajuste de gap) */
+.badges-container{
+  max-width: 1150px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  align-items: start;
+  padding: 0 12px;
+  justify-items: center;
+}
+
+/* Tarjeta de insignia: tamaño contenido más compacto */
+.badge-card{
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+  text-align: center;
+  transition: transform .15s ease, box-shadow .15s ease;
+  min-height: 200px;        /* reducido */
+  max-width: 320px;         /* evitar cards muy anchas */
+  width: 100%;
+}
+
+.badge-card:hover{
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Imagen dentro de la tarjeta: un poco más grande */
+.badge-card figure{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  width: 100%;
+}
+
+.badge-card img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #f1f5f9;
+  padding: 8px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+/* Información de la tarjeta: tipografías más grandes y legibles */
+.badge-info{
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.badge-info h3{
+  margin: 6px 0;
+  font-size: 1.8rem; /* 18px */
+  color: var(--text);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.badge-info p{
+  margin: 4px 0;
+  color: var(--muted);
+  font-size: 1.4rem;
+}
+
+/* Botón verificar: más visible */
+.btn-verify{
+  display: inline-block;
+  margin-top: 10px;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.6rem;
+  transition: background .12s ease, transform .08s ease;
+  box-shadow: 0 6px 16px rgba(37,99,235,0.14);
+}
+
+.btn-verify:hover{
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Responsive: tarjetas apretadas en pantallas pequeñas */
+@media (max-width: 640px){
+  .badges-container{
+    gap: 12px;
+  }
+  .badge-card{
+    padding: 10px;
+    min-height: auto;
+    max-width: 280px;
+  }
+  .badge-card img{
+    width: 96px;
+    height: 96px;
+  }
+  .badge-info h3{
+    font-size: 1.6rem;
+  }
+  .btn-verify{
+    font-size: 1.4rem;
+    padding: 8px 12px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -1617,6 +1814,7 @@ span#spiner{
     .sobremi .skills-container {
         grid-template-columns: 1fr;
         height: auto;
+        min-height: 0;
     }
     
     .sobremi .skills-container .skills-grid:nth-child(3) {
@@ -1624,12 +1822,21 @@ span#spiner{
     }
     
     .sobremi .skills-container .skills-grid h1 {
-        font-size: 2.8rem;
+        font-size: 2.4rem;
     }
     
-    .sobremi .skills-container .skills-grid .skills-flex .skilss-img img {
-        width: 80px;
-        height: 80px;
+    .sobremi .skills-container .skills-grid .skills-flex .skilss-img img,
+    .sobremi .skills-container .skills-grid .skills-flex .skilss-img .skill-icon {
+        width: 72px;
+        height: 72px;
+    }
+
+    .sobremi .skills-container .skills-grid .skills-flex .skilss-img .skill-icon {
+        font-size: 2.4rem;
+    }
+
+    .sobremi .skills-container .skills-grid .skills-flex .skilss-img .skill-label {
+        font-size: 1rem;
     }
 }
 
@@ -1673,9 +1880,14 @@ span#spiner{
 }
 
 @media (max-width: 485px) {
-    .sobremi .skills-container .skills-grid .skills-flex .skilss-img img {
+    .sobremi .skills-container .skills-grid .skills-flex .skilss-img img,
+    .sobremi .skills-container .skills-grid .skills-flex .skilss-img .skill-icon {
         width: 60px;
         height: 60px;
+    }
+
+    .sobremi .skills-container .skills-grid .skills-flex .skilss-img .skill-icon {
+        font-size: 2rem;
     }
     
     .sobremi .skills-container .skills-grid h1 {
@@ -1729,4 +1941,79 @@ span#spiner{
         align-items: center;
         width: 400px;
     }
+}
+
+/* Modal específico para certificados */
+.cert-modal{
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(6,10,20,0.7);
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.cert-modal-content{
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  background: transparent;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.cert-modal-content img{
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+  background: #fff;
+  padding: 6px;
+}
+
+.cert-caption{
+  color: var(--text-color);
+  font-size: 1.6rem;
+  text-align: center;
+  max-width: 90%;
+}
+
+/* Botón cerrar */
+.cert-close{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px){
+  .cert-modal{ padding: 1.2rem; }
+  .cert-modal-content{ max-width: 640px; }
+  .cert-caption{ font-size: 1.4rem; }
+}
+
+@media (max-width: 420px){
+  .cert-modal-content{ max-width: 340px; }
+  .cert-close{ width: 38px; height: 38px; font-size: 1.8rem; top: -6px; right: -6px; }
+  .cert-caption{ font-size: 1.3rem; }
 }
