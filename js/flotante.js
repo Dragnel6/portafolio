@@ -36,4 +36,19 @@ window.onscroll = () => {
     navegacion.classList.remove('active');
 }
 
+(function () {
+    function launchTimelineConfetti() {
+        if (typeof confetti !== 'function') {
+            return;
+        }
+
+        confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+    }
+
+    document.querySelectorAll('.educacion-box').forEach(function (box) {
+        box.addEventListener('click', launchTimelineConfetti);
+    });
+})();
+
+
 

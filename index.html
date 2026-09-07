@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title data-i18n="page-title">Inicio</title>
     <link rel="stylesheet" href="/css/style.css">
     <!--Iconos-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -15,51 +15,43 @@
         <div class="logo">
             <img src="image/logo-2-Photoroom.jpg" alt="Logo personal">
         </div>
-        <div class="bx bx-menu" id="icon"></div>
+        <div class="bx bx-menu" id="icon" role="button" tabindex="0" aria-label="Abrir menú"></div>
         <nav class="menu">
-            <a href="#inicioo" class="active">Inicio</a>
-            <a href="#sobreMI">Experiencia</a>
-            <a href="#sesion">Educación</a>
-            <a href="#skills">Certificados</a>
-            <a href="#resenas">Proyectos</a>
-            <a href="#contacto">Contacto</a>
-            <select id="miSelect" onchange="redireccionar()" class="rectangle-3">
-                <option value="all">Traducir</option>
-                <option value="ingles">Ingles</option>
-                <option value="espanol">Español</option>
+            <a href="#inicioo" class="active" data-i18n="nav-home">Inicio</a>
+            <a href="#sobreMI" data-i18n="nav-experience">Experiencia</a>
+            <a href="#sesion" data-i18n="nav-education">Educación</a>
+            <a href="#skills" data-i18n="nav-certificates">Certificados</a>
+            <a href="#resenas" data-i18n="nav-projects">Proyectos</a>
+            <a href="#contacto" data-i18n="nav-contact">Contacto</a>
+            <select id="miSelect" class="rectangle-3" aria-label="Seleccionar idioma">
+                <option value="all" data-i18n="nav-translate">Traducir</option>
+                <option value="ingles" data-i18n="nav-lang-en">Ingles</option>
+                <option value="espanol" data-i18n="nav-lang-es">Español</option>
             </select>
 
             <span class="active-nav"></span>
         </nav>
     </header>
-   
+
+    <main>
     <!--diseño de section de inicio-->
     <section class="inicio" id="inicioo">
         
         <div class="content-inicio">
-            <h1>Hola, soy <span>Juan Carlos</span></h1>
+            <h1><span class="hero-greeting" data-i18n="hero-title">Hola, soy</span> <span data-i18n="hero-name">Juan Carlos</span></h1>
             <div class="texts-animados">
-                <h3>Full Stack & Mobile Developer</h3>
+                <h3 data-i18n="hero-role">Full Stack & Mobile Developer</h3>
             </div>
-            <p>Soy un estudiante de Ingeniería en Sistemas y Redes Informáticas. A lo largo de mi trayectoria, he desarrollado una fuerte pasión por la creación de soluciones integrales. Mi experiencia abarca desde el diseño de interfaces web y móviles hasta la construcción de arquitecturas backend robustas, participando en proyectos que exigen metodologías ágiles y resolución de problemas complejos.</p>
+            <p data-i18n="hero-bio">Soy un estudiante de Ingeniería en Sistemas y Redes Informáticas. A lo largo de mi trayectoria, he desarrollado una fuerte pasión por la creación de soluciones integrales. Mi experiencia abarca desde el diseño de interfaces web y móviles hasta la construcción de arquitecturas backend robustas, participando en proyectos que exigen metodologías ágiles y resolución de problemas complejos.</p>
              
-            <div class="btn-caja">
-                <div class="btn-caja tns">
-                 <a href="#" class="btnmodal">Mi CV <i style="padding-left: 5px; padding-bottom: 5px;" class="fa-solid fa-download"></i></a>
-                </div>
+            <div class="btn-caja tns">
+                 <a href="#" class="btnmodal"><span data-i18n="btn-cv">Mi CV</span> <i class="fa-solid fa-download"></i></a>
             </div>
         </div>
         
         <!-- Imagen del usuario - aparecerá arriba en responsive -->
         <div class="inicio-img">
             <img src="image/fotocopia-Photoroom.png" alt="Juan Carlos - Full Stack & Mobile Developer">
-            <!-- La ventana modal del curriculum-->
-           <div id="myModal" class="modal">
-                <div class="modal-content">
-                    <span class="close-modal-btn">&times;</span>
-                    <iframe src="/documentos/Curriculum Juan Carlos.pdf" frameborder="0"></iframe>
-                </div>
-            </div>
         </div>
         
         <!-- Redes sociales - deben estar aquí en la sección de inicio -->
@@ -72,7 +64,7 @@
                             <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" fill="currentColor"></path>
                         </svg>
                     </a>
-                    <div class="tooltip">LinkedIn</div>
+                    <div class="tooltip" data-i18n="social-linkedin">LinkedIn</div>
                 </li>
                 <li class="icon-content">
                     <a href="https://github.com/Dragnel6" aria-label="GitHub" data-social="github">
@@ -81,7 +73,7 @@
                             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" fill="currentColor"></path>
                         </svg>
                     </a>
-                    <div class="tooltip">GitHub</div>
+                    <div class="tooltip" data-i18n="social-github">GitHub</div>
                 </li>
             </ul>
         </div>
@@ -89,379 +81,288 @@
 
     <!--Sesion de sobre mi---------------------->
     <section class="sobremi" id="sobreMI">
-        <h2 class="letra" id="L">Mis <span>Experiencias</span></h2>
+        <h2 class="letra"><span data-i18n="title-my">Mis</span> <span class="texto-cyan" data-i18n="title-experience">Experiencias</span></h2>
         
         <div class="skills-container">
             <!-- Contenedor de sesion de Front-end -->
             <div class="skills-grid">
-                <h1>Front-end</h1>
+                <h3 data-i18n="exp-frontend">Front-end</h3>
                 <div class="skills-flex">
                     <div class="skilss-img">
-                      <img src="image/html.png">
+                      <img src="image/html.png" alt="HTML">
                     </div>
                     <div class="skilss-img">
-                     <img src="image/css.png" alt="">
+                     <img src="image/css.png" alt="CSS">
                     </div>
                     <div class="skilss-img">
-                        <img src="image/javascrip.png" alt="">
+                        <img src="image/javascrip.png" alt="JavaScript">
                     </div>
                 </div>
                 <div class="skills-flex">
                     <div class="skilss-img">
-                     <img src="image/boostrap.png" alt="">
+                     <img src="image/boostrap.png" alt="Bootstrap">
                     </div>
                     <div class="skilss-img">
-                        <img src="image/figma.png" alt="">
+                        <img src="image/figma.png" alt="Figma">
                     </div>
                     <div class="skilss-img">
-                        <img src="image/react3.png" alt="">
+                        <img src="image/react3.png" alt="React">
                     </div>
                 </div>
             </div>
             <!-- Contenedor de Mobile & Backend -->
             <div class="skills-grid">
-                <h1>Mobile & Backend</h1>
+                <h3 data-i18n="exp-mobile-backend">Mobile & Backend</h3>
                 <div class="skills-flex">
                     <div class="skilss-img">
                         <img src="image/python.png" alt="Python">
-                        <span class="skill-label">Python</span>
+                        <span class="skill-label" data-i18n="exp-skill-python">Python</span>
                     </div>
                     <div class="skilss-img">
                         <img src="image/react3.png" alt="React Native">
-                        <span class="skill-label">React Native</span>
+                        <span class="skill-label" data-i18n="exp-skill-react-native">React Native</span>
                     </div>
                     <div class="skilss-img">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/expo/expo-original.svg" alt="Expo">
-                        <span class="skill-label">Expo</span>
+                        <span class="skill-label" data-i18n="exp-skill-expo">Expo</span>
                     </div>
                 </div>
                 <div class="skills-flex">
                     <div class="skilss-img">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" alt="Supabase">
-                        <span class="skill-label">Supabase</span>
+                        <span class="skill-label" data-i18n="exp-skill-supabase">Supabase</span>
                     </div>
                     <div class="skilss-img">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" alt="Flask">
-                        <span class="skill-label">Flask</span>
+                        <span class="skill-label" data-i18n="exp-skill-flask">Flask</span>
                     </div>
                     <div class="skilss-img">
                         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="SQLite">
-                        <span class="skill-label">SQLite</span>
+                        <span class="skill-label" data-i18n="exp-skill-sqlite">SQLite</span>
                     </div>
                 </div>
             </div>
             <!-- Contenedor de herramientas y metodologías ágiles -->
             <div class="skills-grid">
-                <h1>Herramientas & Ágil</h1>
+                <h3 data-i18n="exp-tools">Herramientas & Ágil</h3>
                 <div class="skills-flex">
                     <div class="skilss-img">
                         <img src="image/git.png" alt="Git">
-                        <span class="skill-label">Git</span>
+                        <span class="skill-label" data-i18n="exp-skill-git">Git</span>
                     </div>
                     <div class="skilss-img">
                         <img src="image/Github.png" alt="GitHub">
-                        <span class="skill-label">GitHub</span>
+                        <span class="skill-label" data-i18n="exp-skill-github">GitHub</span>
                     </div>
                     <div class="skilss-img">
                         <img src="image/VScode.png" alt="Visual Studio Code">
-                        <span class="skill-label">VS Code</span>
+                        <span class="skill-label" data-i18n="exp-skill-vscode">VS Code</span>
                     </div>
                     <div class="skilss-img">
                         <img src="image/jcpickersssd.png" alt="JcPicker">
-                        <span class="skill-label">JcPicker</span>
+                        <span class="skill-label" data-i18n="exp-skill-jcpicker">JcPicker</span>
                     </div>
                     <div class="skilss-img">
                         <img src="image/lt-browserss.png" alt="LT Browser">
-                        <span class="skill-label">LT Browser</span>
+                        <span class="skill-label" data-i18n="exp-skill-ltbrowser">LT Browser</span>
                     </div>
                     <div class="skilss-img">
-                        <div class="skill-icon" aria-hidden="true"><i class="bx bx-group"></i></div>
-                        <span class="skill-label">Scrum</span>
+                        <i class="bx bx-sync skill-icon" aria-hidden="true"></i>
+                        <span class="skill-label" data-i18n="exp-skill-scrum">Scrum</span>
                     </div>
                     <div class="skilss-img">
-                        <div class="skill-icon" aria-hidden="true"><i class="bx bx-columns"></i></div>
-                        <span class="skill-label">Kanban</span>
+                        <i class="bx bx-columns skill-icon" aria-hidden="true"></i>
+                        <span class="skill-label" data-i18n="exp-skill-kanban">Kanban</span>
                     </div>
                 </div>
             </div>
         </div>
-
-       
     </section>
+
     <!--Sesion de educacion---------------------->
    <section class="sesion1" id="sesion">
-     <h2 class="letra" id="L">Mi <span>Viaje</span></h2>
+     <h2 class="letra"><span data-i18n="title-my">Mi</span> <span class="texto-cyan" data-i18n="title-journey">Viaje</span></h2>
 
-      <div class="educacion-row">
+      <div class="viaje-grid">
           <div class="educacion-column">
-                <h3 class="titulo">Educacion</h3>
+                <h3 class="titulo"><span data-i18n="title-edu">Educación</span></h3>
                 <div class="educacion-box">
                     <div class="educacion-content">
-                        <div class="content">
-                            <div class="years"><i class="fa-solid fa-calendar-days"></i> 2017 - 2019</div>
-                            <h3>Tecnico vocacional comercial opcion contaduria - Bachillerato</h3>
-                        
-                        </div>
+                        <article class="content">
+                            <div class="years"><i class="bx bx-calendar" aria-hidden="true"></i> <span data-i18n="edu-1-years">2017 - 2019</span></div>
+                            <h3><i class="bx bxs-graduation" aria-hidden="true"></i> <span data-i18n="edu-1-title">Tecnico vocacional comercial opcion contaduria - Bachillerato</span></h3>
+                            <p data-i18n="edu-1-desc">Adquisición de bases lógicas, matemáticas y principios administrativos para un pensamiento estructurado.</p>
+                        </article>
+                        <article class="content">
+                            <div class="years"><i class="bx bx-calendar" aria-hidden="true"></i> <span data-i18n="edu-2-years">2020 - 2025</span></div>
+                            <h3><i class="bx bxs-graduation" aria-hidden="true"></i> <span data-i18n="edu-2-title">Ing. En sistemas y redes informática - Universidad Gerardo Barrios</span></h3>
+                            <p data-i18n="edu-2-desc">Formación integral en ingeniería de software, arquitectura de redes, bases de datos y resolución de problemas algorítmicos.</p>
+                        </article>
                     </div>
-
                 </div>
           </div>
-
-           <div style="margin-top: 40px;" class="educacion-column">
+          <div class="educacion-column">
+                <h3 class="titulo"><span data-i18n="title-exp">Experiencia</span></h3>
                 <div class="educacion-box">
                     <div class="educacion-content">
-                        <div class="content">
-                            <div class="years"><i class="fa-solid fa-calendar-days"></i> 2020 - 2025</div>
-                            <h3>Ing. En sistemas y redes informática - Universidad Gerardo Barrios</h3>
-                            
-                        </div>
+                        <article class="content">
+                            <div class="years"><i class="bx bx-calendar" aria-hidden="true"></i> <span data-i18n="edu-3-years">2025 - 2025</span></div>
+                            <h3><i class="bx bx-laptop" aria-hidden="true"></i> <span data-i18n="edu-3-title">Desarrollador Full stack junior - Kodigo</span></h3>
+                            <p data-i18n="edu-3-desc">Bootcamp intensivo enfocado en tecnologías web modernas, diseño de interfaces y metodologías de trabajo colaborativo.</p>
+                        </article>
+                        <article class="content">
+                            <div class="years"><i class="bx bx-calendar" aria-hidden="true"></i> <span data-i18n="edu-4-years">Febrero 2026 - Agosto 2026</span></div>
+                            <h3><i class="bx bx-laptop" aria-hidden="true"></i> <span data-i18n="edu-4-title">Desarrollador Full Stack & Mobile (Pasantía) - Universidad Gerardo Barrios</span></h3>
+                            <p data-i18n="edu-4-desc">Arquitectura de sistemas y desarrollo de la app ALTRATO con frameworks ágiles.</p>
+                        </article>
                     </div>
-
                 </div>
-            </div>
-            <!-- <div class="educacion-column">
-                <h3 class="titulo">Formacion Complementaria</h3>
-                <div class="educacion-box">
-                    <div class="educacion-content">
-                        <div class="content">
-                            <div class="years"><i class="fa-solid fa-calendar-days"></i> 2024 - Actualidad</div>
-                            <h3>Ingles - Polyglot International</h3>
-                        
-                        </div>
-                    </div>
-
-                </div>
-          </div> -->
-           <div style="margin-top: 40px;" class="educacion-column">
-                <div class="educacion-box">
-                    <div class="educacion-content">
-                        <div class="content">
-                            <div class="years"><i class="fa-solid fa-calendar-days"></i> 2025 - 2025</div>
-                            <h3>Desarrollador Full stack junior - Kodigo</h3>
-                            
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-           <div style="margin-top: 40px;" class="educacion-column">
-                <div class="educacion-box">
-                    <div class="educacion-content">
-                        <div class="content">
-                            <div class="years"><i class="fa-solid fa-calendar-days"></i> Febrero 2026 - Agosto 2026</div>
-                            <h3>Desarrollador Full Stack & Mobile (Pasantía) - Universidad Gerardo Barrios</h3>
-                            <p>Arquitectura de sistemas y desarrollo de apps (ALTRATO, Servicell) con frameworks ágiles.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+          </div>
       </div>
    </section>
+
    <!--Sesion de habilidades---------------------->
    <section class="skills" id="skills">
-     <h2 class="letra" id="L">Mis <span>Certificados</span></h2>
-     <div class="certify-accordion">
-        <!-- Cambiado: añadir "is-open" al primer certify-item y aria-expanded="true" al botón -->
-        <div class="certify-item is-open">
-            <button type="button" class="certify-toggle" data-accordion="cert-programacion" aria-expanded="true">Desarrollo</button>
-            <div id="cert-programacion" class="certify-panel">
-                <div class="certify-container">
-                    <div class="flex-certify">
-                        <div class="certify-container">
-                            <img class="cert-thumb" src="/certificados/TALLER DE DISEÑO UX UI_page-0001.jpg" alt="Certificado de diseño UX/UI">
-                        </div>
-                        <div class="certify-container">
-                            <img class="cert-thumb" src="/certificados/diploma-frontend-developer_page-0001.jpg" alt="Certificado Frontend Developer">
-                        </div>
-                        <div class="certify-container">
-                            <img class="cert-thumb" src="/certificados/Desarrollo dr sofware phyton_page-0001.jpg" alt="Certificado Desarrollo Python">
-                        </div>
-                    </div>
-                    <div class="flex-certify">
-                        <div class="certify-container">
-                            <img class="cert-thumb" src="/certificados/CertificadoUDEMY_page-0001.jpg" alt="Certificado Udemy">
-                        </div>
-                        <div class="certify-container">
-                            <img class="cert-thumb" src="/certificados/certificate-mimo-HTML_page-0001.jpg" alt="Certificado Mimo HTML">
-                        </div>
-                        <div class="certify-container">
-                            <img class="cert-thumb" src="/certificados/certificate-mimo-css_page-0001.jpg" alt="Certificado Mimo CSS">
-                        </div>
-                    </div>
-                    <div class="flex-certify">
-                        <div class="certify-container">
-                            <img class="cert-thumb" src="/certificados/Juan Carlos Martinez Torres_page-0001.jpg" alt="Certificado Juan Carlos Martinez Torres">
-                        </div>
-                        <div class="certify-container">
-                            <img class="cert-thumb" src="/certificados/WDA.jpg" alt="Certificado WDA">
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="certify-item">
-            <button type="button" class="certify-toggle" data-accordion="cert-ingles">Ingles</button>
-            <div id="cert-ingles" class="certify-panel">
-                <p class="accordion-empty">Aun no hay certificados en esta seccion.</p>
-            </div>
-        </div>
-        <div class="certify-item">
-            <button type="button" class="certify-toggle" data-accordion="cert-data">Desarrollo con IA</button>
-            <div id="cert-data" class="certify-panel">
-                <div class="certify-container">
-                    <div class="flex-certify">
-                        <div class="certify-container">
-                            <img class="cert-thumb" src="/certificados/BigSchool-IA.jpg" alt="Certificado IA">
-                        </div>
-                         <div class="certify-container">
-                            <img class="cert-thumb" src="/certificados/BigSchool-IA.jpg" alt="Certificado IA">
-                        </div>
-                         <div class="certify-container">
-                            <img class="cert-thumb" src="/certificados/BigSchool-IA.jpg" alt="Certificado IA">
-                        </div>
-                    </div>
-                </div>      
-            </div>
-        </div>
-     </div>
-   </section>
-
-   <!--Nueva sección de Insignias-->
-   <section class="insignias" id="insignias">
-     <h2 class="letra" id="L">Mis <span>Insignias</span></h2>
-     <div class="badges-container">
-       <!-- Badge 1 -->
-       <div class="badge-card">
+     <h2 class="letra"><span data-i18n="title-certificates">Certificados</span> <span class="texto-cyan" data-i18n="title-badges">& Insignias</span></h2>
+     <div class="certificados-grid">
+        <img class="cert-thumb" src="/certificados/TALLER DE DISEÑO UX UI_page-0001.jpg" alt="Certificado de diseño UX/UI">
+        <img class="cert-thumb" src="/certificados/diploma-frontend-developer_page-0001.jpg" alt="Certificado Frontend Developer">
+        <img class="cert-thumb" src="/certificados/Desarrollo dr sofware phyton_page-0001.jpg" alt="Certificado Desarrollo de software con Python">
+        <img class="cert-thumb" src="/certificados/CertificadoUDEMY_page-0001.jpg" alt="Certificado Udemy">
+        <img class="cert-thumb" src="/certificados/certificate-mimo-HTML_page-0001.jpg" alt="Certificado Mimo HTML">
+        <img class="cert-thumb" src="/certificados/certificate-mimo-css_page-0001.jpg" alt="Certificado Mimo CSS">
+        <img class="cert-thumb" src="/certificados/Juan Carlos Martinez Torres_page-0001.jpg" alt="Certificado Juan Carlos Martinez Torres">
+        <img class="cert-thumb" src="/certificados/WDA.jpg" alt="Certificado Web Developer Associate">
+        <img class="cert-thumb" src="/certificados/Certificado Agil_page-0001.jpg" alt="Certificado de metodologías ágiles">
+        <img class="cert-thumb" src="/certificados/BigSchool-IA.jpg" alt="Certificado Big School Inteligencia Artificial">
+        <div class="badge-card">
          <figure>
            <img src="/image/insignia.png" alt="Insignia Certified Associate Web Developer">
          </figure>
          <div class="badge-info">
-           <h3>Certified Associate Web Developer</h3>
-           <p><strong>Año:</strong> 2025</p>
-           <a class="btn-verify" href="https://www.credly.com/badges/ccef7a35-8df4-4758-9b60-87cfaa0a5f1a/public_url" target="_blank" rel="noopener noreferrer">Verificar</a>
+           <h3 data-i18n="badge-cwd-name">Certified Associate Web Developer</h3>
+           <p><strong data-i18n="badge-year-label">Año:</strong> <span data-i18n="badge-cwd-year">2025</span></p>
+           <a class="btn-verify" href="https://www.credly.com/badges/ccef7a35-8df4-4758-9b60-87cfaa0a5f1a/public_url" target="_blank" rel="noopener noreferrer"><span data-i18n="btn-verify">Verificar</span></a>
          </div>
-       </div> 
+       </div>
+     </div>
    </section>
 
 
    <section class="Resenas" id="resenas">
-        <h2 class="letra" id="L">Mis <span>Proyectos</span></h2>
-        <!-- nueva sesion de mostrar mis proyectos aqui de forma ordenada y dinamica que sea atractivo de ver -->
+        <h2 class="letra"><span data-i18n="title-my">Mis</span> <span class="texto-cyan" data-i18n="title-projects">Proyectos</span></h2>
         <div class="project-container">
             <div class="project-card">
                 <div class="project-info">
                     <figure>
-                        <img src="/image/innovation3d.png" alt="Innovation 3D Project">
-                        <h3>Innovation 3D</h3>
+                        <img src="/image/innovation3d.png" alt="Captura del proyecto Innovation 3D">
+                        <h3 data-i18n="project-innovation-title">Innovation 3D</h3>
                     </figure>
-                    <p>
+                    <p data-i18n="project-innovation-desc">
                         Es una app web desarrollada con el objetivo de brindar servicios de impresión 3D como creación 
                         de prototipos, pequeñas y medianas tiradas de piezas con la función de una calculadora hecha para 
                         moldear tu diseño como gustes. Incluye herramientas avanzadas de personalización y estimación de costos.
                     </p>
-                    <button type="button" onclick="window.open('#', '_blank')">Ver Proyecto</button>  
+                    <button type="button" data-project="innovation"><span data-i18n="btn-view-project">Ver Proyecto</span></button>
                 </div>
             </div>
             
-            <!-- Agregar más proyectos aquí cuando estén disponibles -->
             <div class="project-card">
                 <div class="project-info">
                     <figure>
-                        <img src="/image/localwonder.png" alt="Próximo Proyecto">
-                        <h3>Local Wonder SV</h3>
+                        <img src="/image/localwonder.png" alt="Captura del proyecto Local Wonder SV">
+                        <h3 data-i18n="project-localwonder-title">Local Wonder SV</h3>
                     </figure>
-                    <p>
+                    <p data-i18n="project-localwonder-desc">
                         Una app web desarrollada para salones de belleza donde puedan brindar sus productos 
                         y servicios de una manera fácil en donde los clientes ver todo lo que ofrece un salón.
                     </p>
-                     <button type="button" onclick="window.open('#', '_blank')">Ver Proyecto</button>  
+                     <button type="button" data-project="localwonder"><span data-i18n="btn-view-project">Ver Proyecto</span></button>
                 </div>
             </div>
             <div class="project-card">
                 <div class="project-info">
                     <figure>
-                        <img src="/image/arcaasesorios.png" alt="Próximo Proyecto">
-                        <h3>Arca Acces</h3>
+                        <img src="/image/arcaasesorios.png" alt="Captura del proyecto Arca Acces">
+                        <h3 data-i18n="project-arca-title">Arca Acces</h3>
                     </figure>
-                    <p>
+                    <p data-i18n="project-arca-desc">
                         Es una tienda en línea con el objetivo de ofrecer una amplia variedad de productos. Se especializa en 
                         artículos para celulares, destacándose en este ámbito. Que brinda una experiencia de compra intuitiva y
                          sencilla para todos los clientes.
                     </p>
-                    <button type="button" onclick="window.open('#', '_blank')">Ver Proyecto</button> 
+                    <button type="button" data-project="arca"><span data-i18n="btn-view-project">Ver Proyecto</span></button>
                 </div>
             </div>
             <div class="project-card">
                 <div class="project-info">
                     <figure>
-                        <img src="/image/legal.png" alt="Próximo Proyecto">
-                        <h3>Legal Chronocli</h3>
+                        <img src="/image/legal.png" alt="Captura del proyecto Legal Chronocli">
+                        <h3 data-i18n="project-legal-title">Legal Chronocli</h3>
                     </figure>
-                    <p>
+                    <p data-i18n="project-legal-desc">
                         La aplicación web diseñada para ofrecerte una gestión integral de documentos legales
                          y programación de audiencias, entre muchos otros servicios. 
                         y garantizar la máxima seguridad en todos los procesos, asegurando la confidencialidad y protección de tu información.
                     </p>
-                    <button type="button" onclick="window.open('#', '_blank')">Ver Proyecto</button>   
+                    <button type="button" data-project="legal"><span data-i18n="btn-view-project">Ver Proyecto</span></button>
                 </div>
             </div>
             <div class="project-card">
                 <div class="project-info">
                     <figure>
-                        <img src="/image/bibliotech.png" alt="Próximo Proyecto">
-                        <h3>Bibliotech</h3>
+                        <img src="/image/bibliotech.png" alt="Captura del proyecto Bibliotech">
+                        <h3 data-i18n="project-bibliotech-title">Bibliotech</h3>
                     </figure>
-                    <p>
+                    <p data-i18n="project-bibliotech-desc">
                         Bibliotech es un sistema completo para gestionar los recursos de tu biblioteca. Permite administrar libros,
                          autores, categorías y realizar búsquedas avanzadas de manera eficiente y organizada.
                     </p>
-                     <button type="button" onclick="window.open('#', '_blank')">Ver Proyecto</button>  
+                     <button type="button" data-project="bibliotech"><span data-i18n="btn-view-project">Ver Proyecto</span></button>
                 </div>
             </div>
             <div class="project-card">
                 <div class="project-info">
                     <figure>
-                        <img src="/image/servicell.png" alt="Próximo Proyecto">
-                        <h3>Servicell</h3>
+                        <img src="/image/servicell.png" alt="Captura del proyecto Servicell">
+                        <h3 data-i18n="project-servicell-title">Servicell</h3>
                     </figure>
-                    <p>
+                    <p data-i18n="project-servicell-desc">
                         La aplicación web está diseñada para gestionar el inventario de una pequeña empresa de reparación de
                         celulares y venta de accesorios, la app facilita la gestión de inventarios y el seguimiento 
                         financiero, permitiendo que el dueño del negocio tenga una visión clara de su situación económica.
                     </p>
-                    <button type="button" disabled style="opacity: 0.6; cursor: not-allowed;">En Desarrollo</button>  
+                    <button type="button" data-project="servicell"><span data-i18n="btn-view-project">Ver Proyecto</span></button>
                 </div>
             </div>
             <div class="project-card">
                 <div class="project-info">
                     <figure>
-                        <img src="/image/nuevologo.png" alt="Próximo Proyecto">
-                        <h3>HitsPoke</h3>
+                        <img src="/image/nuevologo.png" alt="Captura del proyecto HitsPoke">
+                        <h3 data-i18n="project-hitspoke-title">HitsPoke</h3>
                     </figure>
-                    <p>
+                    <p data-i18n="project-hitspoke-desc">
                         HitsPoke es una tienda en linea dedicada a los fanáticos de Pokémon, que ofrece productos exclusivos
                         relacionados con el universo Pokémon. Desde figuras de acción hasta cartas, HitsPoke es el destino ideal 
                         para los coleccionistas y entusiastas de Pokémon.
                     </p>
-                    <button type="button" onclick="window.open('#', '_blank')">Ver Proyecto</button>  
+                    <button type="button" data-project="hitspoke"><span data-i18n="btn-view-project">Ver Proyecto</span></button>
                 </div>
             </div>
              <div class="project-card">
                 <div class="project-info">
                     <figure>
-                        <img src="/image/Tour.png" alt="Próximo Proyecto">
-                        <h3>Tour SV</h3>
+                        <img src="/image/Tour.png" alt="Captura del proyecto Tour SV">
+                        <h3 data-i18n="project-toursv-title">Tour SV</h3>
                     </figure>
-                    <p>
+                    <p data-i18n="project-toursv-desc">
                         Es una plataforma web interactiva diseñada para conectar a turistas
                         (nacionales y extranjeros) con la riqueza turística de El Salvador 
                         de manera inteligente y contextual. Su enfoque principal es la conveniencia
                         y la inmediatez, permitiendo que el usuario descubra qué hacer basándose 
                         en su ubicación actual y sus intereses específicos.
                     </p>
-                    <button type="button" disabled style="opacity: 0.6; cursor: not-allowed;">En Desarrollo</button>   
+                    <button type="button" disabled><span data-i18n="btn-in-progress">En Desarrollo</span></button>
                 </div>
             </div>
         </div>
@@ -469,36 +370,41 @@
 
    <!--Sesion de contacto---------------------->
    <section class="contactos" id="contacto">
-     <h2 class="letra" id="L">Contacta<span>me</span></h2>
-      <form id="form"  action="https://formspree.io/f/xnqeejra" method="POST">
+     <h2 class="letra"><span data-i18n="title-contact">Contacta</span><span class="texto-cyan" data-i18n="title-contact-me">me</span></h2>
+      <form id="form" action="https://formspree.io/f/xnqeejra" method="POST">
          <div class="input-caja">
             <div class="field">
-                <input name="name" type="text" placeholder="Nombre completo" required>
+                <label for="contact-name" data-i18n="contact-label-name">Nombre completo</label>
+                <input id="contact-name" name="name" type="text" placeholder="Nombre completo" required data-i18n="contact-placeholder-name">
                 <span class="focus"></span>
             </div>
             <div class="field">
-                <input name="email" type="text" placeholder="Correo electronico" required>
+                <label for="contact-email" data-i18n="contact-label-email">Correo electrónico</label>
+                <input id="contact-email" name="email" type="email" placeholder="Correo electronico" required data-i18n="contact-placeholder-email">
                 <span class="focus"></span>
             </div>
          </div>
          <div class="input-caja">
             <div class="field">
-                <input name="name" type="number" placeholder="Numero telefonico" required>
+                <label for="contact-phone" data-i18n="contact-label-phone">Número telefónico</label>
+                <input id="contact-phone" name="phone" type="tel" placeholder="Numero telefonico" required data-i18n="contact-placeholder-phone">
                 <span class="focus"></span>
             </div>
             <div class="field">
-                <input name="name" type="text" placeholder="Asunto del correo" required>
+                <label for="contact-subject" data-i18n="contact-label-subject">Asunto del correo</label>
+                <input id="contact-subject" name="subject" type="text" placeholder="Asunto del correo" required data-i18n="contact-placeholder-subject">
                 <span class="focus"></span>
             </div>
          </div>
          
           <div class="textarea-field">
-             <textarea name="message" id="mensajee" cols="30" rows="10" placeholder="Escribe un mensaje" required></textarea>
+             <label for="contact-message" data-i18n="contact-label-message">Mensaje</label>
+             <textarea name="message" id="contact-message" cols="30" rows="10" placeholder="Escribe un mensaje" required data-i18n="contact-placeholder-message"></textarea>
              <span class="focus"></span>
           </div>
 
           <div class="btn-caja tns">
-             <button type="submit" class="btn">Enviar</button>
+             <button type="submit" class="btn"><span data-i18n="btn-send">Enviar</span></button>
           </div>
       </form>
       <div id="loading" class="loader-inner ball-pulse">
@@ -506,20 +412,56 @@
        </div>
 
     </section>
+    </main>
+
     <!--sesion de pie de pagina---------------------->
     <footer class="piee">
         <div class="logo2">
             <img src="image/logo-2-Photoroom.jpg" alt="Logo personal">
         </div>
         <div class="pie-text">
-            <p>Copyright & copy; 2024 by juan carlos | All Right Reserved.</p>
+            <p data-i18n="footer-copy">Copyright &copy; 2024 by juan carlos | All Right Reserved.</p>
         </div>
         <div class="pie-icons">
-            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+            <a href="#inicioo" aria-label="Volver al inicio"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal-btn" role="button" tabindex="0" aria-label="Cerrar">&times;</span>
+            <iframe src="/documentos/Curriculum Juan Carlos.pdf" title="Curriculum de Juan Carlos"></iframe>
+        </div>
+    </div>
+
+<div id="certModal" class="cert-modal" aria-hidden="true" role="dialog" aria-label="Vista previa del certificado">
+  <div class="cert-modal-content" role="document">
+    <button class="cert-close" aria-label="Cerrar">&times;</button>
+    <img id="certModalImg" src="" alt="">
+    <p id="certModalCaption" class="cert-caption"></p>
+  </div>
+</div>
+
+<div id="project-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" aria-hidden="true">
+  <div class="project-modal-box" role="document">
+    <button type="button" class="project-modal-close" aria-label="Cerrar">
+      <i class="bx bx-x" aria-hidden="true"></i>
+    </button>
+    <div class="carousel-container">
+      <button type="button" id="prev-slide" class="nav-arrow" aria-label="Diapositiva anterior">
+        <i class="bx bx-chevron-left" aria-hidden="true"></i>
+      </button>
+      <div id="carousel-track"></div>
+      <button type="button" id="next-slide" class="nav-arrow" aria-label="Diapositiva siguiente">
+        <i class="bx bx-chevron-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</div>
     
     <script src="/js/flotante.js"></script>
+    <script src="/js/i18n.js"></script>
+    <script src="/js/projects.js"></script>
     <script>
         const $form = document.querySelector('#form');
         const $loading = document.querySelector('#loading');
@@ -585,42 +527,6 @@
             }
         }
     </script>
-    <script>
-        const accordionToggles = document.querySelectorAll('[data-accordion]');
-
-        accordionToggles.forEach((toggle) => {
-            toggle.addEventListener('click', () => {
-                const panelId = toggle.getAttribute('data-accordion');
-                const panel = document.getElementById(panelId);
-                const item = toggle.closest('.certify-item');
-
-                if (!panel || !item) {
-                    return;
-                }
-
-                item.classList.toggle('is-open');
-            });
-        });
-    </script>
-    <script>
-        function redireccionar() {
-          var selectValue = document.getElementById("miSelect").value;
-          
-          if (selectValue === "ingles") {
-            window.location.href = "/index-ingles.html";
-          } else if (selectValue === "espanol") {
-            window.location.href = "/index.html";
-          }
-        }
-    </script>
-    <!-- Añadir modal para ver certificados (colocar antes de cerrar body) -->
-<div id="certModal" class="cert-modal" aria-hidden="true" role="dialog" aria-label="Vista previa del certificado">
-  <div class="cert-modal-content" role="document">
-    <button class="cert-close" aria-label="Cerrar">&times;</button>
-    <img id="certModalImg" src="" alt="">
-    <p id="certModalCaption" class="cert-caption"></p>
-  </div>
-</div>
 
 <!-- Script: abrir modal al hacer clic en .cert-thumb -->
 <script>
@@ -667,6 +573,7 @@
     });
   })();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
     
 </body>
 </html>
